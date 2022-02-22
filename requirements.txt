@@ -1,0 +1,6 @@
+Flask
+Flask-Session
+requests
+flask-socketio
+simple-websocket
+cs50

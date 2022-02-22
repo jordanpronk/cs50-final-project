@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block title %}
+Register
+{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-sm-6 mx-auto mt-5">
+        <h1> Register</h1>
+        <form action="/register" method="post">
+            <div class="form-group mt-3">
+                <input name="username" class="form-control" nametype="text" placeholder="Username" autocomplete="off">
+            </div>
+            <div class="form-group mt-3">
+                <input name="password" class="form-control" type="password" placeholder="Password" autocomplete="off">
+            </div>
+            <div class="form-group mt-3">
+                <input name="confirmation" class="form-control" type="password" placeholder="Confirm Password" autocomplete="off">
+            </div>
+            <div class="form-group mt-3">
+                <button class="form-control" class="btn btn-primary"> Register </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 mx-auto mt-5">
+        <a href="/login">Login</a>
+    </div>
+</div>
+
+
+<!-- <form action="/register" method="post">
+    <input name="username" nametype="text" placeholder="Username" autocomplete="off">
+    <input name="password" type="password" placeholder="Password" autocomplete="off">
+    <input name="confirmation" type="password" placeholder="Confirm Password" autocomplete="off">
+    <button> Register </button>
+</form>
+<a href="/login">Login</a> -->
+{% endblock %}

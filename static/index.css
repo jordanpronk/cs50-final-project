@@ -1,0 +1,29 @@
+#message-output {
+    border: 1px solid black;
+    background-color: rgb(219, 219, 219);
+    list-style-type: none;
+
+    overflow-y: scroll;
+    height: 50vh;
+}
+
+#message-output > li > .badge {
+    /* Messsage outlines */
+    margin-bottom: 8px;
+    margin-right: 8px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+#message-input, #send-btn {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.msg-user {
+    font-style: normal;
+    color: navy;
+    margin-right: 1em;
+    white-space: normal; /* Allow wraping */
+}

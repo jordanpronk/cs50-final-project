@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %}
+    {{room['nickname']}}
+{% endblock %}
+
+{% block body %}
+
+<!-- Room Info -->
+<div class="row">
+    <div class="col-sm-8">
+        <h2 class="mt-2">Room: <span data-room-id="{{ room['room_address'] }}" id="current-room-label">{{room['nickname']}}</span></h2>
+    </div>
+    <div class="col-sm-4">
+        <div id="participants-section" class="card my-2">
+            <div class="card-header">Participants:</div>
+            <ul id="participants-list" class="list-group list-group-flush"> 
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Message Box -->
+<div class="row">
+    <div class="col-12">
+        <ul id="message-output">
+        </ul>
+    </div>
+</div>
+
+<!-- Write Message Form -->
+<div class="row">
+    <div class="col-12">
+        <form id="message-input-form">
+            <div class="row">
+                <div class="col-sm-10">
+                    <input disabled="true" type="text" name="message" maxlength="80" id="message-input">
+                </div>
+                <div class="col-sm-2">
+                    <button class="btn btn-primary" disabled="true" id="send-btn">Send</button>
+                </div>
+            </div>
+        </form>
+        
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/static/chat.js" charset="utf-8"></script>
+
+{% endblock %}

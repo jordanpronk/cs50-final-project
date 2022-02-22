@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}
+Index
+{% endblock %}
+
+{% block body %}
+    <div class="row mt-5">
+        <div class="col col-sm-6 mx-auto">
+            <h3> Rooms </h3>
+            <a href="/rooms">
+                <button class="btn btn-primary my-3">
+                    Create Room
+                </button>
+            </a>
+            <ul class="rooms-list list-group">
+                {% for room in rooms %}
+                    <li class="list-group-item"> <a href="/rooms?room={{room['room_address']}}"> {{ room["nickname"] }} </a> </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </row>
+    
+   
+{% endblock %}
